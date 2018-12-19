@@ -36,9 +36,18 @@ h1 {
     background-color: #afeeee;
 }
 
+.win {
+    animation: win 800ms infinite alternate;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: space-around;
+}
+
+@keyframes win {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
 }
