@@ -46,17 +46,17 @@ class Game {
    * Is game done?
    */
   resolve() {
-    if (!this.isPlayable()) {
-      // No more cells to play!
-      return this.end();
-    }
-
     let line = null;
     const winner = this.players.find(player => line = this.getWinningLine(player));
 
     if (winner) {
       // Game is won!
       this.end(winner, line);
+    }
+
+    if (!this.isPlayable()) {
+      // No more cells to play!
+      return this.end();
     }
   }
 
