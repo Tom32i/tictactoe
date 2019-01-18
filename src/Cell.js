@@ -53,7 +53,6 @@ class Cell {
   setOwner(player) {
     if (this.isFree()) {
       this.player = player;
-      this.update();
     }
   }
 
@@ -62,7 +61,6 @@ class Cell {
    */
   setWinning() {
     this.winning = true;
-    this.update();
   }
 
   /**
@@ -71,7 +69,6 @@ class Cell {
   reset() {
     this.player = null;
     this.winning = false;
-    this.update();
   }
 
   /**

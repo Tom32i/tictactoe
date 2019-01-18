@@ -51,7 +51,7 @@ class Game {
 
     if (winner) {
       // Game is won!
-      this.end(winner, line);
+      return this.end(winner, line);
     }
 
     if (!this.isPlayable()) {
@@ -155,5 +155,6 @@ class Game {
    */
   update() {
     this.message.innerText = this.getMessage();
+    this.cells.forEach(cell => cell.update());
   }
 }
